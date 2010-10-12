@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Product:</b>
+  <%= @product.product %>
+</p>
+
+<p>
+  <b>Slno:</b>
+  <%= @product.slno %>
+</p>
+
+<p>
+  <b>Model:</b>
+  <%= @product.model %>
+</p>
+
+<p>
+  <b>Capacity:</b>
+  <%= @product.capacity %>
+</p>
+
+<p>
+  <b>Datepurchased:</b>
+  <%= @product.datepurchased %>
+</p>
+
+<p>
+  <b>Warranty:</b>
+  <%= @product.warranty %>
+</p>
+
+<p>
+  <b>Remark:</b>
+  <%= @product.remark %>
+</p>
+
+<p>
+  <b>Consumer:</b>
+  <%= @product.consumer_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
