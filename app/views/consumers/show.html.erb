@@ -58,3 +58,19 @@
 
 <%= link_to 'Edit', edit_consumer_path(@consumer) %> |
 <%= link_to 'Back', consumers_path %>
+
+<div id='cprod'>
+<table id=hor-zebra>
+<tr>
+  <th>Product</th>
+  <th>Serial No</th>
+  <th>Model</th>
+  <th>Capacity</th>
+  <th>Date Purchased</th>
+  <th>Warranty</th>
+  <th>Remark</th>
+</tr>
+<%= render :partial => "products/product",
+	:collection => @consumer.products %> 
+</table>
+</div>

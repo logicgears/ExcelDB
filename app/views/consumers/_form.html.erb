@@ -4,9 +4,9 @@
       <h2><%= pluralize(@consumer.errors.count, "error") %> prohibited this consumer from being saved:</h2>
 
       <ul>
-      <% @consumer.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @consumer.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
