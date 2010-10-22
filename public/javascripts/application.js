@@ -27,6 +27,6 @@ $(window).scroll(function(e){
       $('#cinfo').css({'position': 'fixed','margin-left': '290px', 'top': '130px'}); 
     } 
     else {
-      $('#cinfo').css({'top': '2px'}); 
+      $('#cinfo').css({'position': 'fixed','margin-left': '290px', 'top': '2px'}); 
     }  
 });
