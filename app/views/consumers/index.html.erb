@@ -5,12 +5,15 @@
 <div id='container'>
 	<div id='clist'>
 		<% @consumers.each do |consumer| %>
-			<%= link_to consumer.name, consumer_path(consumer) %> <br>
+      <div class='cust'>
+		  	<%= link_to consumer.name, consumer_path(consumer) %> <br>
+      </div> 
 		<% end %>
 	</div> 
 	<div id='cinfo'> </div>
 </div> 
 <br />
 
-
+<div id="newc">
 <%= link_to 'New Consumer', new_consumer_path %>
+</div>

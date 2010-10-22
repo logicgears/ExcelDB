@@ -1,76 +1,79 @@
+<div id='detail'>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @consumer.name %>
-</p>
-
-<p>
-  <b>Address:</b>
-  <%= @consumer.address %>
-</p>
-
-<p>
-  <b>City:</b>
-  <%= @consumer.city %>
-</p>
-
-<p>
-  <b>Pin:</b>
-  <%= @consumer.pin %>
-</p>
-
-<p>
-  <b>State:</b>
-  <%= @consumer.state %>
-</p>
-
-<p>
-  <b>Hphone:</b>
-  <%= @consumer.hphone %>
-</p>
-
-<p>
-  <b>Phone:</b>
-  <%= @consumer.phone %>
-</p>
-
-<p>
-  <b>Mobile:</b>
-  <%= @consumer.mobile %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @consumer.email %>
-</p>
-
-<p>
-  <b>Website:</b>
-  <%= @consumer.website %>
-</p>
-
-<p>
-  <b>Note:</b>
-  <%= @consumer.note %>
-</p>
-
-
-<%= link_to 'Edit', edit_consumer_path(@consumer) %> |
-<%= link_to 'Back', consumers_path %>
-
-<div id='cprod'>
-<table id=hor-zebra>
+<div id='cusdetail'>
+<table rows="11" cols="2" id="custtab">
 <tr>
-  <th>Product</th>
-  <th>Serial No</th>
-  <th>Model</th>
-  <th>Capacity</th>
-  <th>Date Purchased</th>
-  <th>Warranty</th>
-  <th>Remark</th>
+  <td>Name:</td>
+  <td><%= @consumer.name %></td>
 </tr>
-<%= render :partial => "products/product",
-	:collection => @consumer.products %> 
+
+<tr>
+  <td>Address:</td>
+  <td><%= @consumer.address %></td>
+</tr>
+
+<tr>
+  <td>City:</td>
+  <td><%= @consumer.city %></td>
+</tr>
+
+<tr>
+  <td>Pin:</td>
+  <td><%= @consumer.pin %></td>
+</tr>
+
+<tr>
+  <td>State:</td>
+  <td><%= @consumer.state %></td>
+</tr>
+
+<tr>
+  <td>Htrhone:</td>
+  <td><%= @consumer.hphone %></td>
+</tr>
+
+<tr>
+  <td>Phone:</td>
+  <td><%= @consumer.phone %></td>
+</tr>
+
+<tr>
+  <td>Mobile:</td>
+  <td><%= @consumer.mobile %></td>
+</tr>
+
+<tr>
+  <td>Email:</td>
+  <td><%= @consumer.email %></td>
+</tr>
+
+<tr>
+  <td>Website:</td>
+  <td><%= @consumer.website %></td>
+</tr>
+
+<tr>
+  <td>Note:</td>
+  <td><%= @consumer.note %></td>
+</tr>
+<tr><td></td><td>
+    <div id='navlinks'><%= link_to 'Edit', edit_consumer_path(@consumer) %> </div></td>
 </table>
+</div>
+  <div id='cprod'>
+  <table id='prodtab'>
+    <tr>
+      <th>Product</th>
+      <th>Serial No</th>
+      <th>Model</th>
+      <th>Capacity</th>
+      <th>Date Purchased</th>
+      <th>Warranty</th>
+      <th>Remark</th>
+    </tr>
+    <%= render :partial => "products/product",
+      :collection => @consumer.products %> 
+    </table>
+  </div>
 </div>

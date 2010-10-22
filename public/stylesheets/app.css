@@ -26,9 +26,17 @@ div.field, div.actions {
   margin-bottom: 10px;
 }
 
+#navlinks {
+  text-align: right;
+}
+
+#newc {
+  clear: both;
+}
+
 #clist {
   border: 1px solid #BAD0EF;
-  width: 324px;
+  width: 260px;
   padding: 8px 8px 8px 8px;
   float: left;
 }
@@ -48,12 +56,26 @@ div.field, div.actions {
 
 #cinfo {
   border: 1px solid #BAD0EF;
-  width: 640px;
-  min-height: 650px;
+  width: 700px;
   padding: 8px 8px 8px 8px;
   float: right;
+  top: 130px;
 }
 
+#prodtab {
+  border: 1px dotted #BAD0EF;
+  margin-top: 10px;
+  padding: 10px 10px 10px 10px;
+  min-width: 698px;
+}
+
+
+#custtab {
+  border: 1px dotted #BAD0EF;
+  margin-top: 10px;
+  padding: 10px 10px 10px 10px;
+  min-width: 698px;
+}
 
 #notice {
   color: green;
