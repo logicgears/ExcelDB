@@ -77,6 +77,14 @@ div.field, div.actions {
   min-width: 698px;
 }
 
+.ui-menu {
+  background-color: #c0c99f;
+  width:260px;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border:1px solid #6a6c6a;
+}
+
 #notice {
   color: green;
 }

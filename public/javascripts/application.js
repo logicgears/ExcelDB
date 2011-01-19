@@ -20,6 +20,23 @@ $('.cust a').click(function() {
   return false;
 });
 
+$('input#consumer_name').bind('focusout',function() {
+  var url = '/consumers/' + $('input#id_element_placeholder').val();
+  var link = this;
+
+  $.ajax({
+    url: url,
+    success: function(data) {
+    var $fullContent = $('#cusdetail', data);
+    var $Content = $('#cprod', data);
+    var html = $fullContent.html();
+    var html2 = $Content.html();
+    $('#cinfo').html(html);
+    $('#cinfo').append(html2);
+    }
+  });
+  return false;
+});
 
 $(window).scroll(function(e){ 
     $el = $('#cinfo'); 

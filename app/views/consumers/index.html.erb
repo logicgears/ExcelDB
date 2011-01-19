@@ -1,6 +1,14 @@
 <h3>Excel Database</h3>
 
 <hr />
+Search: 
+
+<%= form_for :consumer do |f| %>
+  <%= f.autocomplete_field :name, consumers_autocomplete_consumer_name_path, :id_element => "#id_element_placeholder" %>                                                                                                                                                          
+      <%= hidden_field_tag :id_element_placeholder, '' %>   
+<input type="button" value="Search"/>
+<% end %>
+
 
 <div id='container'>
 	<div id='clist'>

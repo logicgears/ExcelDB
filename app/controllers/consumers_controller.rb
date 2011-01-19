@@ -1,4 +1,6 @@
 class ConsumersController < ApplicationController
+
+  autocomplete :consumer, :name, :full=>true
   # GET /consumers
   # GET /consumers.xml
   def index

@@ -3,6 +3,7 @@ Exceldb::Application.routes.draw do
 
   #resources :consumers
 
+  get "consumers/autocomplete_consumer_name"
 
   resources :consumers do
     resources :products
