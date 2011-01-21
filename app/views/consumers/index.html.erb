@@ -1,24 +1,27 @@
 <h3>Excel Database</h3>
 
+<div id="myList-nav"></div> 
 <hr />
 Search: 
 
 <%= form_for :consumer do |f| %>
   <%= f.autocomplete_field :name, consumers_autocomplete_consumer_name_path, :id_element => "#id_element_placeholder" %>                                                                                                                                                          
       <%= hidden_field_tag :id_element_placeholder, '' %>   
-<input type="button" value="Search"/>
+<input id="searchb" type="button" value="Search"/>
 <% end %>
 
 
 <div id='container'>
 	<div id='clist'>
+    <ul id="myList">
 		<% @consumers.each do |consumer| %>
-      <div class='cust'>
+      <li><div class='cust'>
 		  	<%= link_to consumer.name, consumer_path(consumer) %> <br>
-      </div> 
+      </div></li> 
 		<% end %>
+  </ul>
 	</div> 
-	<div id='cinfo'> </div>
+  <div id='cinfo'> <div align = center> Welcome to the Customer Database. <br /> Select a customer in the left pane.</div> </div>
 </div> 
 <br />
 

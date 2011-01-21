@@ -4,7 +4,9 @@ class ConsumersController < ApplicationController
   # GET /consumers
   # GET /consumers.xml
   def index
-    @consumers = Consumer.all
+  #  @consumers = Consumer.all
+    params[:search].capitalize! if params[:search]
+    @consumers = Consumer.find(:all, :conditions => ['name LIKE ?', "%#{params[:search]}%"], :order => 'name')
 
     respond_to do |format|
       format.html # index.html.erb

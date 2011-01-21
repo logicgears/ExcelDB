@@ -41,9 +41,13 @@ $('input#consumer_name').bind('focusout',function() {
 $(window).scroll(function(e){ 
     $el = $('#cinfo'); 
     if ($(this).scrollTop() < 135){ 
-      $('#cinfo').css({'position': 'fixed','margin-left': '290px', 'top': '130px'}); 
+      $('#cinfo').css({'position': 'fixed','margin-left': '290px', 'top': '195px'}); 
     } 
     else {
       $('#cinfo').css({'position': 'fixed','margin-left': '290px', 'top': '2px'}); 
     }  
+});
+
+$(document).ready(function() {
+    $('#myList').listnav();
 });
