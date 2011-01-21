@@ -25,11 +25,12 @@ class ProductsController < ApplicationController
   # GET /products/new
   # GET /products/new.xml
   def new
+    @consumer = Consumer.find(params[:consumer_id])
     @product = Product.new
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @product }
+      format.xml  # { render :xml => @product }
     end
   end
 
@@ -45,15 +46,17 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.xml
   def create
-    @product = Product.new(params[:product])
+    @consumer = Consumer.find(params[:consumer_id])
+    @product = @consumer.products.create!(params[:product])
+    #@product = Product.new(params[:product])
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to(@product, :notice => 'Product was successfully created.') }
-        format.xml  { render :xml => @product, :status => :created, :location => @product }
+        format.html { redirect_to(@consumer, :notice => 'Product was successfully created.') }
+        format.xml  { render :xml => @consumer, :status => :created }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @product.errors, :status => :unprocessable_entity }
+        format.xml  { render :xml => @consumer.errors, :status => :unprocessable_entity }
       end
     end
   end
