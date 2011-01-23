@@ -21,6 +21,7 @@ pre {
 #flash {
   text-align: right;
   margin-right: auto;
+  float:right;
 }
 
 #nav {

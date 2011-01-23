@@ -73,6 +73,7 @@
     </tr>
     <%= render :partial => "products/product",
       :collection => @consumer.products %> 
+      <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><%= link_to 'Add', new_consumer_product_path(@consumer) %></td></tr>
     </table>
   </div>
 </div>
