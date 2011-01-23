@@ -52,6 +52,20 @@ div.field, div.actions {
   box-shadow: 12px 12px 10px #aaa;
 }
 
+
+.formcont {
+  margin-left: auto;
+  margin-right: auto;
+  width: 280px;
+}
+
+.formborder{
+  background-color: #E2EBF8;
+  padding: 25px;
+  width: 450px;
+  margin: auto;
+}
+
 #navlinks {
   text-align: right;
 }
@@ -92,15 +106,24 @@ div.field, div.actions {
   border: 1px dotted #BAD0EF;
   margin-top: 10px;
   padding: 10px 10px 10px 10px;
-  min-width: 698px;
+  width: 698px;
 }
 
+#prodtab td,th{
+  border: 1px dotted #BAD0EF;
+  margin-top: 10px;
+  padding: 1px 1px 1px 1px;
+}
 
 #custtab {
   border: 1px dotted #BAD0EF;
-  margin-top: 10px;
   padding: 10px 10px 10px 10px;
-  min-width: 698px;
+  width: 698px;
+}
+
+#custtab td:nth-child(2n+1) {
+  margin-top: 10px;
+  width: 100px; 
 }
 
 #myList {
@@ -110,22 +133,24 @@ div.field, div.actions {
 li { list-style-type: none;}
 li:nth-child(even) { background: #E2EBF8; }
 
-#consumer_name {
+#searchbox {
   width: 276px;
   border: 1px solid #BAD0EF;
-  background-color: #E2EBF8;
 }
 
 textarea, input  {
   width: 276px;
-  border: 1px solid #BAD0EF;
-  background-color: #E2EBF8;
+  border:1px solid #6a6c6a;
+  -moz-border-radius:1px;
+  -webkit-border-radius:1px;
+  -moz-box-shadow: 1px 1px 1px #aaa;
+  -webkit-box-shadow: 1px 1px 1px #aaa;
+  box-shadow: 1px 1px 1px #aaa;
 }
 
 #product_datepurchased_1i, #product_datepurchased_2i, #product_datepurchased_3i
 {
-  border: 1px solid #BAD0EF;
-  background-color: #E2EBF8;
+  border: 1px solid #6a6c6a;
 }
 
 #searchb {

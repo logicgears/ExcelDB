@@ -20,7 +20,14 @@ $('.cust a').click(function() {
   return false;
 });
 
-$('input#consumer_name').bind('focusout',function() {
+// FIXME Some stupid bug in Autocomplete Search Blank Entries gets created //
+$('input#searchbox').keypress(function(e) {
+    if(e.keyCode == 13) {
+	return false;
+    }
+});
+
+$('input#searchbox').bind('focusout',function() {
   var url = '/consumers/' + $('input#id_element_placeholder').val();
   var link = this;
 
