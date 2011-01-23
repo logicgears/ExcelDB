@@ -1,4 +1,5 @@
 class ConsumersController < ApplicationController
+  before_filter :require_user
 
   autocomplete :consumer, :name, :full=>true
   # GET /consumers

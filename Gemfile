@@ -9,6 +9,7 @@ gem 'rails', '3.0.0'
 gem 'pg'
 gem 'jquery-rails'
 gem 'rails3-jquery-autocomplete'
+gem 'authlogic'
 
 # Use unicorn as the web server
 # gem 'unicorn'

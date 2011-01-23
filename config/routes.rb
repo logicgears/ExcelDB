@@ -1,7 +1,5 @@
 Exceldb::Application.routes.draw do
-  #resources :products
 
-  #resources :consumers
 
   get "consumers/autocomplete_consumer_name"
 
@@ -9,7 +7,12 @@ Exceldb::Application.routes.draw do
     resources :products
   end
 
-  root :to => "consumers#index"
+  root :to => "user_sessions#new"
+  
+  resources :users, :user_sessions
+  match 'login' => 'user_sessions#new', :as => :login
+  match 'logout' => 'user_sessions#destroy', :as => :logout
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
