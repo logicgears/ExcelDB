@@ -47,14 +47,17 @@ $('input#searchbox').bind('focusout',function() {
 
 $(window).scroll(function(e){ 
     $el = $('#cinfo'); 
-    if ($(this).scrollTop() < 135){ 
-      $('#cinfo').css({'position': 'fixed','margin-left': '290px', 'top': '195px'}); 
+    if ($(this).scrollTop() < 165){ 
+      $('#cinfo').css({'position': 'fixed','margin-left': '290px', 'top': '212px'}); 
+      $('#searchb').fadeIn();
     } 
     else {
       $('#cinfo').css({'position': 'fixed','margin-left': '290px', 'top': '2px'}); 
+      $('#searchb').fadeOut();
     }  
 });
 
 $(document).ready(function() {
     $('#myList').listnav();
+    $('#flash').delay(8000).fadeOut(500); 
 });
