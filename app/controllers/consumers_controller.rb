@@ -46,6 +46,9 @@ class ConsumersController < ApplicationController
   # POST /consumers.xml
   def create
     @consumer = Consumer.new(params[:consumer])
+    @consumer.name.capitalize!
+    @consumer.city.capitalize! 
+    @consumer.state.capitalize! 
 
     respond_to do |format|
       if @consumer.save

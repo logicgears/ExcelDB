@@ -13,6 +13,7 @@ Search:
 
 <div id='container'>
 	<div id='clist'>
+    <div id="newc"><%= link_to 'New Consumer', new_consumer_path %></div>
     <ul id="myList">
 		<% @consumers.each do |consumer| %>
       <li><div class='cust'>
@@ -23,8 +24,3 @@ Search:
 	</div> 
   <div id='cinfo'> <div align = center> Welcome to the Customer Database. <br /> Select a customer in the left pane.</div> </div>
 </div> 
-<br />
-
-<div id="newc">
-<%= link_to 'New Consumer', new_consumer_path %>
-</div>

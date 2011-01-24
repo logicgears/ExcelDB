@@ -71,7 +71,7 @@ div.field, div.actions {
 }
 
 #newc {
-  clear: both;
+  text-align: right;
 }
 
 #clist {
