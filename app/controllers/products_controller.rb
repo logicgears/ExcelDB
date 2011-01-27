@@ -87,7 +87,7 @@ class ProductsController < ApplicationController
     @product.destroy
 
     respond_to do |format|
-      format.html { redirect_to (@consumer, :notice => 'Product was deleted.') }
+      format.html { redirect_to(@consumer, :notice => 'Product was deleted.') }
       format.xml  { head :ok }
     end
   end
