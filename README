@@ -1,4 +1,5 @@
 Welcome 
 
-This is an Intranet application used to maintain the customer records.
+
+This is an Rewritten Intranet application used to maintain the customer records. This Version now includes AJAX Interface and is rewritten in Rails 3 and Jquery.
 
